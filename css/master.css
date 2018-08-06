@@ -1,0 +1,107 @@
+/*
+Overall look of pages.
+Primarily using CSS Grid with a little bit of Flexbox.
+
+TODO: Mobile / (MORE) Responsive Layouts
+*/
+
+body
+{
+  font-family: Roboto;
+  background-color: #FAFAFA;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar */
+
+.navbar-container
+{
+  display: grid;
+  grid-template-columns: .15fr 1fr .15fr;
+  grid-template-areas:
+    ". navbar-content .";
+
+  background-color: #0277BD;
+  /* https://material.io/color/#!/?view.left=0&view.right=0&primary.color=0277BD */
+  height: 50px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.navbar-content
+{
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 3fr;
+  grid-template-areas:
+    "navbar-logo . navbar-links";
+
+  grid-area: navbar-content;
+  font-size: 23px;
+}
+
+.navbar-content a
+{
+  text-decoration: none;
+  color: #FFF;
+}
+
+.navbar-logo
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  grid-area: navbar-logo;
+}
+
+.navbar-links
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "link-1 link-2 link-3";
+
+  grid-area: navbar-links;
+}
+
+.link-1
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  grid-area: link-1;
+}
+
+.link-2
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  grid-area: link-2;
+}
+
+.link-3
+{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  grid-area: link-3;
+}
+
+/* Main Content */
+
+.main-container
+{
+  display: grid;
+  grid-template-columns: .15fr 1fr .15fr;
+  grid-template-areas:
+    ". main-content .";
+}
+
+.main-content
+{
+  grid-area: main-content;
+}
